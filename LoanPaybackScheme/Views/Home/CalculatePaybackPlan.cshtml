@@ -1,0 +1,33 @@
+﻿@model IEnumerable<LoanCalculator.Output.LoanCalculationOutput>
+
+@{
+    ViewData["Title"] = "CalculatePaybackPlan";
+}
+
+<h1>Payback Plan</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Month
+            </th>
+            <th>
+                EMI
+            </th>            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.InstallmentMonth
+                </td>
+                <td>
+                    @item.TotalAmount
+                </td>                
+            </tr>
+        }
+    </tbody>
+</table>

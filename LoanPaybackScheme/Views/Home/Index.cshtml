@@ -1,0 +1,23 @@
+﻿@model IEnumerable<LoanCalculator.Input.LoanCalculationInput>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h3 class="display-4">Welcome to calculate loan payback scheme</h3>
+    <div>
+        <form asp-controller="Home" asp-action="CalculatePaybackPlan">
+            <p>
+                <label>Enter Amount</label>
+                <input type="number" name="Amount"/>
+                <label>Tenure</label>
+                <input type="number" name="LoanDurationInYears" />
+                <label>Select Loan Type: </label>
+                <select name="LoanType" id="LoanType">
+                    <option value="0">Home Loan</option>                    
+                </select>
+                <input type="submit" value="Filter" />
+            </p>
+        </form>        
+    </div>
+</div>
